@@ -7,5 +7,4 @@ import android.app.Fragment;
  */
 public class FirstPage extends Fragment {
 
-
 }
