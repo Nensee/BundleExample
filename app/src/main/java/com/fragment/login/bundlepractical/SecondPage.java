@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * Created by nensee on 2/7/17.
@@ -16,12 +17,14 @@ import android.widget.Button;
 public class SecondPage extends Fragment
 {
     private Button btn1;
+    private EditText editText1;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.second_page,container,false);
         btn1= (Button) view.findViewById(R.id.button2);
+        editText1=(EditText)view.findViewById(R.id.edtvw1);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
