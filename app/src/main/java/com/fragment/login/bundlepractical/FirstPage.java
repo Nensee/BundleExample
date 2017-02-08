@@ -15,25 +15,30 @@ import android.widget.EditText;
  * Created by nensee on 2/7/17.
  */
 public class FirstPage extends Fragment {
-    private Button btn1;
+    private Button btn;
     private EditText editText;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.first_page,container,false);
-        btn1= (Button) view.findViewById(R.id.button1);
+        btn= (Button) view.findViewById(R.id.button1);
         editText=(EditText)view.findViewById(R.id.edtvw);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 SecondPage s=new SecondPage();
+                String str=editText.getText().toString();
+
                 FragmentManager fm = getFragmentManager();
                 Bundle args = new Bundle();
                 FragmentTransaction ft = fm.beginTransaction();
-                args.putString("Key","edtw");
+                args.putString("Key",str);
                 s.setArguments(args);
+
+                editText.setText("");
                 ft.replace(R.id.rltv,s);
                 ft.addToBackStack("");
                 ft.commit();

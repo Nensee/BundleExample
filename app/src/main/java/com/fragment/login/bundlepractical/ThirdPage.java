@@ -9,20 +9,35 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EdgeEffect;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * Created by nensee on 2/7/17.
  */
 public class ThirdPage extends Fragment {
 
-    private Button btn1;
+    private Button btn2;
+    TextView textv,textv1;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.third_page,container,false);
-        btn1= (Button) view.findViewById(R.id.button3);
-        btn1.setOnClickListener(new View.OnClickListener() {
+
+        btn2= (Button) view.findViewById(R.id.button3);
+
+        textv=(TextView) view.findViewById(R.id.txtvw2);
+        textv1=(TextView) view.findViewById(R.id.txtvw3);
+
+        String value = getArguments().getString("Key");
+        String valuee = getArguments().getString("Keyy");
+
+        textv.setText(value);
+        textv1.setText(valuee);
+
+        btn2.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
@@ -34,8 +49,8 @@ public class ThirdPage extends Fragment {
                 //Bundle bundle = this.getArguments();
                 //String value = bundle.getString("Key");
 
-                String value = getArguments().getString("Key");
-                String valuee = getArguments().getString("Keyy");
+
+
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.rltv,f);
 
