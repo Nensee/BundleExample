@@ -18,11 +18,17 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtvw1"
             android:text="Semester:" />
+
         <EditText
+            android:id="@+id/edtvw1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edtvw1">
-        </EditText>
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Enter Semester"
+            android:inputType="text" />
+
 
     </LinearLayout>
 

@@ -17,9 +17,15 @@
 
 
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/edtvw"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edtvw"/>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Your username"
+        android:inputType="text" />
+
 </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -27,17 +33,23 @@
         android:orientation="horizontal">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtvw2"
         android:text="Semester" />
 
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtvw2"/>
-</LinearLayout>
+        <EditText
+            android:id="@+id/edtvw1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Your Semester"
+            android:inputType="text" />
+
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"

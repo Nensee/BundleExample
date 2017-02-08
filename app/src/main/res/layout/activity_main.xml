@@ -10,8 +10,5 @@
     tools:context="com.fragment.login.bundlepractical.MainActivity"
     android:id="@+id/rltv">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+
 </RelativeLayout>
